@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Garet&display=swap');
+
+body {
+    margin: 0;
+    background: linear-gradient(to bottom right, #252e76,#080c2b, #252e76);
+    min-height: 100vh;
+    font-family: 'Garet', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    position: fixed;
+    top: 0;
+}
+
+.navbar img {
+    height: 50px;
+}
+
+.macbook {
+    margin-top: 130px; /* space below navbar */
+    background: white;
+    border-radius: 10px;
+    padding: 0;
+    width: 850px;
+    height: 500px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+  }
+  
+  .macbar {
+    background: #e5e5e5;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .circle {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+  }
+  
+  .circle.red {
+    background: #ff5f57;
+  }
+  
+  .circle.yellow {
+    background: #ffbd2e;
+  }
+  
+  .circle.green {
+    background: #28ca42;
+  }
+  
+  .mac-content {
+    background: white;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .mac-content h1 {
+    color: black;
+    margin-bottom: 50px;
+    margin-top: 30px;
+    font-size: 36px;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+  }
+  
+  .game-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+  
+  .game-grid .game-box {
+    background: #b0b0b0;
+    border-radius: 12px;
+    width: 176px;
+    height: 144px;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+  
+  .game-grid .game-box:hover {
+    transform: scale(1.05);
+    background: #a0a0a0;
+  }
+  
+  /* Create proper 3-2 layout using flexbox */
+  .game-grid::before {
+    content: "";
+    display: flex;
+    gap: 32px;
+  }
+  
+  .game-grid .game-box:nth-child(1),
+  .game-grid .game-box:nth-child(2),
+  .game-grid .game-box:nth-child(3) {
+    position: relative;
+    margin-right: 32px;
+  }
+  
+  .game-grid .game-box:nth-child(3) {
+    margin-right: 0;
+  }
+  
+  .game-grid .game-box:nth-child(4),
+  .game-grid .game-box:nth-child(5) {
+    position: relative;
+    margin-right: 32px;
+  }
+  
+  .game-grid .game-box:nth-child(5) {
+    margin-right: 0;
+  }
+  
+  /* Better approach for 3-2 grid layout */
+  .game-grid {
+    display: block;
+  }
+  
+  .game-grid .game-box:nth-child(1),
+  .game-grid .game-box:nth-child(2),
+  .game-grid .game-box:nth-child(3) {
+    display: inline-block;
+    margin-right: 32px;
+  }
+  
+  .game-grid .game-box:nth-child(3) {
+    margin-right: 0;
+  }
+  
+  .game-grid .game-box:nth-child(4),
+  .game-grid .game-box:nth-child(5) {
+    display: inline-block;
+    margin-right: 32px;
+    margin-top: 40px;
+  }
+  
+  .game-grid .game-box:nth-child(5) {
+    margin-right: 0;
+  }
+  
+  .game-grid .game-box:nth-child(4) {
+    margin-left: 104px; /* Center the bottom row */
+  }
