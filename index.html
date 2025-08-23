@@ -1,11 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tech Hub</title>
   <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet"><!--for pixel font-->
+
 </head>
+
 <body>
 
   <nav class="navbar">
@@ -20,17 +24,57 @@
       <div class="circle green"></div>
     </div>
 
+
+
     <div class="mac-content">
-      <h1>CHOOSE YOUR GAME</h1>
-      <div class="game-grid">
-        <div class="game-box"></div>
-        <div class="game-box"></div>
-        <div class="game-box"></div>
-        <div class="game-box"></div>
-        <div class="game-box"></div>
+      <div class="textContainer">
+        <h2 class="text"></h2>
       </div>
+
+      
+
+        <div class="game-grid">
+          <!-- Top row -->
+          <div class="game-grid-row">
+            <div><!-- 1 -->
+              <div class="game-box"></div>
+              <p class="game-title">Human VS AI</p>
+            </div>
+            <div ><!-- 2 -->
+              <div class="game-box"></div>
+              <p class="game-title">Fake OR Real</p>
+            </div>
+            <div ><!-- 3 -->
+              <div class="game-box"></div>
+              <p class="game-title">CyberTrace</p>
+            </div>
+          </div>
+          <!-- Bottom row -->
+          <div class="game-grid-row">
+            <div ><!-- 4 -->
+              <div class="game-box"></div>
+              <p class="game-title">Countdown</p>
+            </div>
+            <div > <!-- 5 -->
+              <div class="game-box"></div>
+              <p class="game-title">Guess The Timeline</p>
+            </div>
+          </div>
+        </div>
+
+      
     </div>
   </div>
+  <!-- Spline Viewer for 3d robot -->
+  <spline-viewer class="spline-fixed" url="https://prod.spline.design/cEEMPTwlHujoq0JM/scene.splinecode">
+  </spline-viewer>
+
+
+  <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.51/build/spline-viewer.js"></script>  <!-- for 3d robot -->
+  <script src="script.js"></script>
+
+  <br>
 
 </body>
+
 </html>
